@@ -16,13 +16,13 @@ Fin
 """
 #leemos nombre
 nombre=str(input("Introduzca su nombre: "))
-#Si nombre="" usamos desconocido
+#Si nombre=="" usamos desconocido
 if nombre=="":
     nombre="Desconocido"
 #Leemos edad
 edad=int(input("Introduzca su edad: "))
 #Si edad es menor o igual que 0 y mayor o igual que 125 mostramos "Error"
-if edad<=0 and edad>=125:
+if edad<0 and edad>125:
     print("Error")
 #Sino mostramos su nombre y edad y los años que le quedan por cumplir"
 else:
