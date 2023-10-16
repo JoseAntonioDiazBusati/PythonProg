@@ -23,18 +23,24 @@ Inicio
 		numIni = y - 1
 		numFin = x
 		
-	Para i en (numIni...numFin) hacer
-		Escribe i + 
+	Mientras (numIni <= numFin) hacer
+		Escribe numIni
 		Si (numIni != numFin) entonces
 			Escribe "-"
+                numIni = numIni + 1
 
 Fin
 """
 x=int(input("Introduce un numero: "))
 y=int(input("Introduce otro: "))
-if x>=y:
+if (x<=y):
     numIni=x
     numFin=y
 else:
     numIni=y
     numFin=x
+while (numIni<=numFin):
+    print(numIni, end="")
+    if (numIni!=numFin):
+        print("-", end="")
+    numIni+=1
