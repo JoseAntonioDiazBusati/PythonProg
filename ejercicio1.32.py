@@ -33,8 +33,8 @@ Fin
 x=int(input("Introduce un numero: "))
 y=int(input("Introduce otro: "))
 if x>=y:
-    numIni=x-1
+    numIni=x
     numFin=y
 else:
-    numIni=y-1
+    numIni=y
     numFin=x

@@ -14,4 +14,15 @@ Si totserie = 0  mostramos Error no puede ser menor que 0
 Mientras 
 Final
 """
-num_inicio=""
+num_inicio=int(input("Introduce un numero de inicio: "))
+num_incremento=int(input("Ahora el incremento: "))
+tot_serie=int(input("Por ultimo el total de la serie: "))
+
+if(num_incremento==0):
+    print("Error no puede ser menor que 0.")
+else:
+    while(num_inicio>0):
+        num_inicio=num_inicio+num_incremento
+        print(num_inicio)
+        if(num_inicio!=tot_serie):
+            print("Fin de la serie")
