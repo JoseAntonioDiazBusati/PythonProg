@@ -17,12 +17,13 @@ Final
 num_inicio=int(input("Introduce un numero de inicio: "))
 num_incremento=int(input("Ahora el incremento: "))
 tot_serie=int(input("Por ultimo el total de la serie: "))
-
+cont=1
 if(num_incremento==0):
     print("Error no puede ser menor que 0.")
 else:
-    while(num_inicio>0):
-        num_inicio=num_inicio+num_incremento
-        print(num_inicio)
-        if(num_inicio!=tot_serie):
-            print("Fin de la serie")
+    ser="{num_incremento}-{plus}".format(num_inicio=num_inicio,plus=(num_inicio+num_incremento))
+    while(cont<tot_serie-2):
+        num_inicio+=num_incremento
+        ser="{ser}..{num_incremento}".format(num_inicio=num_inicio,plus=(num_inicio+num_incremento))
+        cont+=1
+        ser="{ser}-{plus}".format(ser=ser,plus=(num_inicio+num_incremento))
