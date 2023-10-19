@@ -36,8 +36,8 @@ Lee dias
 Mientras dias sea menor que cero entonces:
     Escribe "*** Error - el valor no puede ser negativo ***"
     Lee dias
-año=dias//365
-dias_mes=dias%365
+año=dias//360
+dias_mes=dias%360
 mes=dias_mes//30
 dias_restantes=dias_mes%30
 Si año es uno entonces:
@@ -59,8 +59,8 @@ dias=int(input("Introduce los dias trabajados: "))
 while dias<0:
     print("*** Error - el valor no puede ser negativo ***")
     dias=int(input("Introduce los dias trabajados: "))
-año=dias//365
-dias_mes=dias%365
+año=dias//360
+dias_mes=dias%360
 mes=dias_mes//30
 dias_restantes=dias_mes%30  
 if año==1:
