@@ -31,6 +31,47 @@ Ejemplo 3:
 
 Inicio
 
-    
+Escribe "Introduce los dias trabajados: "
+Lee dias
+Mientras dias sea menor que cero entonces:
+    Escribe "*** Error - el valor no puede ser negativo ***"
+    Lee dias
+año=dias//365
+dias_mes=dias%365
+mes=dias_mes//30
+dias_restantes=dias_mes%30
+Si año es uno entonces:
+    Escribe "Ha cotizado {año} año,",end=""
+Sino:
+    "Ha cotizado {año} años,",end=""
+Si mes es uno entonces:
+    Escribe " {mes} mes,",end=""
+Sino:
+    Escribe " {mes} meses,",end=""
+Si día es uno entonces:
+    Escribe " {día_restante} día.",end=""
+Sino:
+    Escribe " {dia_restante} días.",end=""
+  
 Fin
 """
+dias=int(input("Introduce los dias trabajados: "))
+while dias<0:
+    print("*** Error - el valor no puede ser negativo ***")
+    dias=int(input("Introduce los dias trabajados: "))
+año=dias//365
+dias_mes=dias%365
+mes=dias_mes//30
+dias_restantes=dias_mes%30  
+if año==1:
+    print(f"Ha cotizado {año} año,",end="")
+else:
+    print(f"Ha cotizado {año} años,",end="")
+if mes==1:
+    print(f" {mes} mes,",end="")
+else:
+    print(f" {mes} meses,",end="")
+if dias_restantes==1:
+    print(f" {dias_restantes} día.",end="")
+else:
+    print(f" {dias_restantes} días.",end="")
